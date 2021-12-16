@@ -4,9 +4,9 @@ Getting start project for having fun with JEE
 
 ## Demo Images
 ### Login Page
-![](demo-images\login.PNG)
+![](login.PNG)
 ### Home Page
-![](demo-images\home.PNG)
+![](home.PNG)
 ### Add User Page
-![](demo-images\addUser.PNG)
+![](addUser.PNG)
 ## Demo Link
