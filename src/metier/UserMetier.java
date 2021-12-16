@@ -32,9 +32,6 @@ public class UserMetier {
 	}
 	
 	public static void logout(HttpServletRequest request) {
-//		request.getSession().removeAttribute("currentUser");
-//		request.getSession().removeAttribute("updatePayload");
-//		request.getSession().removeAttribute("addPayload");
 		for (SessionKey key : SessionKey.values()) {
 			request.getSession().removeAttribute(key.label);
 		}
@@ -61,16 +58,12 @@ public class UserMetier {
 	}
 
 	public static boolean updateUser(HttpServletRequest request, User payload) {
-		//request.getSession().setAttribute(SessionKey.updatePayload.label, payload);
 		if(
 				payload.getNom() != null && !"".equals(payload.getNom()) &&
 				payload.getLogin() != null && !"".equals(payload.getLogin()) &&
 				payload.getPrenom() != null && !"".equals(payload.getPrenom())
 		) {
 			boolean result = UserDao.updateUser(payload);
-//			if(result) {
-//				request.getSession().removeAttribute(SessionKey.updatePayload.label);
-//			}
 			return result;
 		}
 		return false;
